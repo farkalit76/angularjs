@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>Test</title>
+    </head>
+    <body ng-app="">
+
+        <div>
+            Hello brother!! <br/>
+            Name: <input type="text" ng-model="name"/> &nbsp; Hello {{name}}
+            
+        </div>
+
+        <div ng-init ="cities=['Delhi','Mumbai','Bangalore']" >
+            <ul>
+                <li ng-repeat="name in cities">{{name}}</li>
+            </ul>
+        </div>
+
+        <div ng-init="customers=[{name:'Usman', city:'Delhi'}, {name:'Vir', city:'Ahmadabad'}, {name:'Vishwa', city:'Hydrabad'}]">
+                <ul>
+                    <li ng-repeat="cust in customers | filter:name | orderBy:'city'">{{cust.name | uppercase }} - {{cust.city | lowercase}}</li>
+                </ul>
+        </div>
+        <script type="text/javascript" src="angular.min.js" ></script>
+    </body>
+    
+</html> 

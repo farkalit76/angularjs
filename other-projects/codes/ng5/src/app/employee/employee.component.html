@@ -1,0 +1,117 @@
+<!--
+<div class="container color-dark">
+
+  <form novalidate   [formGroup]="empForm">
+  
+    <div class="form-group"  [ngClass]="{
+      'has-danger': empId.invalid && (empId.dirty || empId.touched),
+      'has-success': empId.valid && (empId.dirty || empId.touched)
+      }">
+      <label class="form-label">Emp ID</label>
+      <input type="text"  class="form-control"  formControlName="empId"  required>
+      <div class="form-control-feedback"
+           *ngIf="empId.errors && (empId.dirty || empId.touched)">
+        <p *ngIf="empId.errors.required">Employee Id is required</p>
+        <p *ngIf="empId.errors.minlength">Employee Id must be at least 3 characters long.  </p>
+      </div>
+    </div>
+
+    <div class="form-group"  [ngClass]="{
+        'has-danger': empName.invalid && (empName.dirty || empName.touched),
+        'has-success': empName.valid && (empName.dirty || empName.touched)
+      }">
+      <label class="form-label">Emp Name</label>
+      <input type="text"  class="form-control"  formControlName="empName"  required>
+      <div class="form-control-feedback"   *ngIf="empName.errors && (empName.dirty || empName.touched)">
+        <p *ngIf="empName.errors.required">Employee Name is required</p>
+      </div>
+    </div>
+  
+ 
+    <div class="form-group"  [ngClass]="{
+        'has-danger': email.invalid && (email.dirty || email.touched),
+        'has-success': email.valid && (email.dirty || email.touched)
+      }">
+      <label class="form-label">Email</label>
+      <input type="text"  class="form-control"  formControlName="email"  required>
+      <div class="form-control-feedback" 
+        *ngIf="email.errors && (email.dirty || email.touched)">
+        <p *ngIf="email.errors.required">Email is required</p>
+        <p *ngIf="email.errors.pattern">The email address must contain at least the @ character</p>
+      </div>   
+     </div>
+  
+      <div class="form-group"  [ngClass]="{
+            'has-danger': phone.invalid && (phone.dirty || phone.touched),
+            'has-success': phone.valid && (phone.dirty || phone.touched)
+          }">
+        <label class="form-label" >Phone</label>
+        <input type="text"  class="form-control"  formControlName="phone"  required>
+        <div class="form-control-feedback"
+            *ngIf="phone.errors && (phone.dirty || phone.touched)">
+          <p *ngIf="phone.errors.required">Phone is required</p>
+          <p *ngIf="phone.errors.minlength">Phone must be at least 6 digit. </p>
+          <p *ngIf="phone.errors.pattern">Phone must be integer only. </p>
+        </div>
+      </div>
+      
+      <div class="form-group"  [ngClass]="{
+            'has-danger': address.invalid && (address.dirty || address.touched),
+            'has-success': address.valid && (address.dirty || address.touched)
+          }">
+        <label class="form-label" >Address</label>
+        <input type="text"  class="form-control"  formControlName="address"  required>
+        <div class="form-control-feedback"
+            *ngIf="address.errors && (address.dirty || address.touched)">
+          <p *ngIf="address.errors.required">Address is required</p>
+          <p *ngIf="address.errors.minlength">Address must be 8 characters long. </p>
+        </div>
+      </div>
+  
+      <div class="form-group"  [ngClass]="{
+        'has-danger': salary.invalid && (salary.dirty || salary.touched),
+        'has-success': salary.valid && (salary.dirty || salary.touched)
+          }">
+        <label class="form-label" >Salary</label>
+        <input type="text"  class="form-control"  formControlName="salary"  required>
+        <div class="form-control-feedback"
+            *ngIf="salary.errors && (salary.dirty || salary.touched)">
+          <p *ngIf="salary.errors.required">Salary is required</p>
+          <p *ngIf="salary.errors.pattern">Salary must be integer only. </p>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <input class="form-control" type="submit" name="btnSubmit" value="Submit Employee" >
+      </div>
+     
+  </form>
+  </div>
+-->
+<div>
+  <button class="form-control" type="button" (click)="getEmployees()">Get Employees</button>
+</div>
+<br>
+  <div>
+    <table width="50%" border="1">
+      <tr>
+        <td>Emp Id</td>
+        <td>Name</td>
+        <td>Address</td>
+        <td>DOB</td>
+        <td>Email ID</td>
+        <td>Phone Number</td>
+        <td>Salary</td>
+      </tr>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.empId}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.address}}</td>
+        <td>{{emp.dob}}</td>
+        <td>{{emp.email_id}}</td>
+        <td>{{emp.phone_num}}</td>
+        <td>{{emp.salary}}</td>
+      </tr>
+    </table>
+  </div>
+  

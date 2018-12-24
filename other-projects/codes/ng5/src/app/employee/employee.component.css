@@ -1,0 +1,32 @@
+
+.form-label{
+    display: inline-block; 
+    width: 500px;
+    padding: 5px 5px 5px 5px;
+    font-size: 1em;
+    font-family: Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.form-group {
+    width: 100%; 
+    padding: 2px 2px 10px 2px;
+}
+
+.form-control{
+    font-family: Geneva, Verdana, sans-serif; 
+    color: #333890; 
+    width: 50%; 
+    box-sizing: 
+    border-box; 
+    padding: 5px 5px 5px 5px;
+    letter-spacing: 1px;
+}
+
+.form-control-feedback{
+    font: bold; 
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: .8em;
+    font-weight: bold;
+    color: #e60d0d; 
+    padding: 1px 1px 1px 100px;
+}

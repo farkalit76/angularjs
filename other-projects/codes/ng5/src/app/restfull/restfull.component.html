@@ -1,0 +1,25 @@
+<div class="container color-dark">
+    <div>
+        ID : <input type="text" name="id" (keyup) = "onIdKeyUp($event)" size="2"/>
+        <button (click)="getProfileById()">Get Profile By ID</button>
+    </div>
+    <br>
+    <div *ngIf="titleFound"> 
+        <span>Title =[{{title}} ] for id ={{id}}</span>
+    </div>
+
+    <br>
+    <div>
+        Title : <input type="text" name="title" (keyup) = "onTitleKeyUp($event)"/>
+        <button (click)="getProfileByTitle()">Get Profile By Title</button>
+    </div>
+    <br>
+    <div *ngIf="idFound"> 
+        <span>Title =[{{title}} ] for id ={{id}}</span>
+    </div>
+
+    <br>
+    <div>
+        <button (click)="postProfile()">Post Profile</button>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="topup">
+    <div id="topleft">
+        <img src="./assets/images/neo_logo.jpg" style=" width: 100%; height: 50px;">
+    </div>
+    <div id="topright">
+      <div style="float: right">
+        <!--<img src="./assets/images/search.jpg" style="width: 20px; height: 20px;">-->
+        <input class="inputsearch" type="text" name="search" size="30" placeholder="Search">
+        &emsp;&emsp;&emsp; Admin  
+        <a (click)="loginPage();"><img src="./assets/images/admin.jpg" style="width: 20px; height: 20px;"></a> &emsp;&emsp;&emsp;
+      </div>
+    </div>
+</div>
+<div style="float: left; width: 100%;">
+  <div>
+      <div class="menubarempty">&nbsp;</div>
+      <div class="menubar"><a routerLink="todo">Todo</a></div>
+      <div class="menubar"><a routerLink="help">Help</a></div>
+      <div class="menubar"><a routerLink="about">About</a></div>
+      <router-outlet></router-outlet>
+  </div>
+</div>
+<div id="footer">made with @ innovation lab</div>

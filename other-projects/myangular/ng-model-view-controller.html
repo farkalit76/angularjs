@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Test</title>
+    </head>
+    <body  ng-controller="SimpleController">
+
+        <div >
+            Hello brother!! <br/>
+            Name: <input type="text" ng-model="name"/> &nbsp; Hello {{name}}
+        
+            <h3>Adding a simple controller</h3>
+            <ul>
+                <li ng-repeat="cust in customers | filter:name">{{cust.name}} - {{cust.city}}</li>
+            </ul>
+        </div>
+        
+        <script type="text/javascript" src="angular.min.js" ></script>
+        <script>
+            var app = angular.module('myApp', []);
+            //Define annonymous function
+            app.controller('SimpleController', function($scope) {
+           //function SimpleController($scope){
+               $scope.customers=[
+                   {name:'Usman', city:'Delhi'},
+                   {name:'Ahmad', city:'Gurgao'},
+                   {name:'Vir', city:'Mumbai'},
+                   {name:'Nidhal', city:'Cochin'},
+               ];
+           });
+        </script>
+    </body>
+    
+</html> 

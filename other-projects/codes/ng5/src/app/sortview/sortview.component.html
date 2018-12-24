@@ -1,0 +1,45 @@
+
+<div>Sortable and Pagination DIV Table</div>
+<div class="Table">
+  <div class="Heading" matSort (matSortChange)="sortData($event)">
+      <div class="CellHead" mat-sort-header="name">Dessert</div>
+      <div class="CellHead" mat-sort-header="calories">Calories</div>
+      <div class="CellHead" mat-sort-header="fat">Fat</div>
+      <div class="CellHead" mat-sort-header="carbs">Carbs</div>
+      <div class="CellHead" mat-sort-header="protein">Protein</div>
+      <div class="CellHead" mat-sort-header="time">Date</div>
+      <div class="CellHead" >Time</div>
+  </div>
+  <div class="Row" *ngFor="let dessert of sortedData | paginate: {itemsPerPage:5, currentPage:p }">
+      <div class="Cell">{{dessert.name}}</div>
+      <div class="Cell">{{dessert.calories}}</div>
+      <div class="Cell">{{dessert.fat}}</div>
+      <div class="Cell">{{dessert.carbs}}</div>
+      <div class="Cell">{{dessert.protein}}</div>
+      <div class="Cell">{{dessert.time | date:'mediumDate'}}</div>
+      <div class="Cell">{{dessert.time | date:'mediumTime'}}</div>
+  </div>
+</div>
+<pagination-controls (pageChange)="p=$event"></pagination-controls>
+
+<hr/>
+<div>Sortable Table Data</div>
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="name">Dessert (100g)</th>
+    <th mat-sort-header="calories">Calories</th>
+    <th mat-sort-header="fat">Fat (g)</th>
+    <th mat-sort-header="carbs">Carbs (g)</th>
+    <th mat-sort-header="protein">Protein (g)</th>
+    <th mat-sort-header="time">DateTime</th>
+  </tr>
+  <tr *ngFor="let dessert of sortedData ">
+    <td>{{dessert.name}}</td>
+    <td>{{dessert.calories}}</td>
+    <td>{{dessert.fat}}</td>
+    <td>{{dessert.carbs}}</td>
+    <td>{{dessert.protein}}</td>
+    <td>{{dessert.time}}</td>
+  </tr>
+</table>
+<!-- <pagination-controls (pageChange)="p=$event"></pagination-controls> -->

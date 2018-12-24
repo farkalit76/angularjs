@@ -1,0 +1,40 @@
+<html>
+    <body ng-app="sortApp">
+        
+        <p>Click the table headers to change the sorting order:</p>
+        <div ng-controller="sortCtrl">
+            <table border="1" width="60%">
+                <tr>
+                    <th ng-click="orderByMe('name')">Name</th>
+                    <th ng-click="orderByMe('city')">City</th>
+                    <th ng-click="orderByMe('class')">Class</th>
+                </tr>
+                <tr ng-repeat="x in students | orderBy:dataOrderBy">
+                    <td ng-bind="x.name"></td>
+                    <td ng-bind="x.city"></td>
+                    <td ng-bind="x.class"></td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script src="angular.min.js"></script>
+        <script>
+            var sortApp = angular.module('sortApp',[]);
+
+            sortApp.controller('sortCtrl', function($scope){
+                $scope.students=[
+                    {name:'usman',city:'Delhi',class:'BTech'},
+                    {name:'ahmad',city:'Mumabi',class:'MSC'},
+                    {name:'hamid',city:'Dubai',class:'BSC'}
+                ]; 
+
+                $scope.orderByMe = function(x){
+                    $scope.dataOrderBy = x ;
+                };
+            });
+
+            
+        </script>
+    </body>
+</html>

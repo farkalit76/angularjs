@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+    <head>
+        <title>Test</title>
+    </head>
+    <body  >
+
+        <div ng-controller="SimpleController">
+            Hello brother!! <br/>
+            Name: <input type="text" ng-model="name"/> &nbsp; Hello {{name}}
+        
+            <h3>Adding a simple controller</h3>
+            <ul>
+                <li ng-repeat="cust in customers | filter:name">{{cust.name}} - {{cust.city}}</li>
+            </ul>
+        </div>
+
+        <div ng-controller="AnotherController">           
+                <h3>Adding an ANOTHER controller</h3>
+                <ul>
+                    <li ng-repeat="stud in students | filter:name">{{stud.name}} - {{stud.class}}</li>
+                </ul>
+        </div>
+        
+        <script type="text/javascript" src="angular.min.js" ></script>
+        <script>
+            //define the angular module
+            var demoApp = angular.module('demoApp', []);
+           //Define controller function
+            function SimpleController($scope){
+               $scope.customers=[
+                   {name:'Usman', city:'Delhi'},
+                   {name:'Ahmad', city:'Gurgao'},
+                   {name:'Vir', city:'Mumbai'},
+                   {name:'Nidhal', city:'Cochin'},
+               ];
+            }
+            demoApp.controller('SimpleController', SimpleController);
+
+            //You may also write it like this as well
+            //var demoApp = angular.module('demoApp', []);
+           
+            var controllers ={};
+            //creating external function
+            controllers.AnotherController= function($scope){
+               $scope.students=[
+                   {name:'Usman', class:'BA'},
+                   {name:'Ahmad', class:'MSC'},
+                   {name:'Vir', class:'LLC'},
+                   {name:'Nidhal', class:'MCA'},
+               ];
+            }
+            //pass the external function in controller
+            demoApp.controller( controllers);
+
+        </script>
+    </body>
+    
+</html> 

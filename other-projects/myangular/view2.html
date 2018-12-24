@@ -1,0 +1,9 @@
+<div class="container">
+    View 2 <br/>
+    Name: <input type="text" ng-model="filter.name"/> &nbsp; Hello {{name}}
+
+    <h3>Adding a simple controller</h3>
+    <ul>
+        <li ng-repeat="cust in customers | filter:filter.name">{{cust.name}} - {{cust.city}}</li>
+    </ul>
+</div>

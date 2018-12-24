@@ -1,0 +1,207 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+//Common styles accross the pages
+body {
+    background: rgb(255, 255, 255);
+    //padding: 3em;
+    font-family: 'Raleway' , 'Arial';
+    //color: rgb(36, 23, 219);
+}
+
+ui{
+    list-style-type: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+ul li a{
+    font-size: 1.5em;
+    font-style: bold;
+}
+
+a{
+    color: rgb(32, 9, 245);
+    text-decoration: none; 
+}
+
+a:hover {
+    color: hotpink;
+}
+
+////////////////////////////////
+///Main Div Partition//////////
+///////////////////////////////
+#topup { 
+    width:100%; 
+    height: 50px; 
+    background:rgb(33, 62, 156); 
+    float:left; 
+ }
+ 
+ #left { 
+    width:17%; 
+    height:850px;
+    font-size: 20px; 
+    color: white;
+    background:rgb(214, 46, 74); 
+    float: left;
+ }
+
+ #right { 
+    width:81%; 
+    height:850px; 
+    background: white;
+    float: right;
+    overflow: auto;
+ }
+
+ #footer{
+    width:100%; 
+    height: 30px; 
+    font-size: 4mm;
+    text-align: center;
+    padding-top: 10px;
+    color:white;
+    background:rgb(87, 175, 113); 
+    float:left; 
+ }
+///
+#topleft
+{
+    width:17%; 
+    height: 50px; 
+    background-color:white;
+    float: left;
+}
+#topright
+{
+    width:83%; 
+    height: 50px; 
+    float: left;
+    padding-top: 17px;
+    color: white;
+    //border: 1px solid rgb(189, 89, 89);
+}
+
+//////////////////////////////////
+//Div table styles////////////////
+//////////////////////////////////
+.Table
+{
+    display: table;
+    width: 100%;
+}
+.Title
+{
+    display: table-caption;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    width: 880px;
+    background-color:rgb(122, 10, 10);
+}
+.Heading
+{
+    display: table-row;
+    font-weight: bold;
+    text-align: left;
+    background-color:rgb(34, 116, 163);
+    color: white;
+    
+}
+.Row
+{
+    display: table-row;
+    
+}
+
+.Cell
+{
+    display: table-cell;
+    border: solid;
+    border-width: .0mm;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+
+///////////////////////////////
+//add th style for header///////
+///////////////////////////////
+.imglogo
+{
+    width: 100%;
+    height: 60px;
+}
+
+.leftPanel
+{
+    padding-left: 40px;
+    padding-right: 80px;
+    font-size: 15px; 
+}
+
+.leftFont
+{
+    font-size: 40px; 
+    font-weight: bold;
+}
+
+.menubar
+{
+    width: 150px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(43, 96, 128);
+    float: left;
+}
+
+.menubarempty
+{
+    width: 17%; 
+    height:50px;
+    background:rgb(214, 46, 74);
+    float: left;  
+}
+
+.menubar a{
+    color: rgb(43, 96, 128);
+    text-decoration: none;
+}
+
+.menubar a:hover {
+    color: rgb(255, 105, 113);
+}
+
+hr.style1{
+	border-top: 1px solid #8c8b8b;
+}
+
+.inputsearch
+{
+    width: 50%;
+    box-sizing: border-box;
+    background-color:rgb(33, 62, 156);
+    border-style: solid;
+    border-color: white;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+
+    font-family: inherit;
+    font-size: 100%;
+    color: white;
+}

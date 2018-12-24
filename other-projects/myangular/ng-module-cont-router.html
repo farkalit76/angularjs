@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+
+            This is for router palceholder.
+            <!-- placeholder for the views -->
+            <div ng-view></div>
+        
+        <script type="text/javascript" src="angular.min.js" ></script>
+        <script type="text/javascript" src="angular-route.js" ></script>
+        <script>
+           
+            var demoApp = angular.module('demoApp', ['ngRoute']);
+
+            demoApp.config(['$routeProvider',function($routeProvider){
+                $routeProvider
+                .when('/',
+                {
+                    controller:'SimpleController',
+                    templateUrl:'view1.html'
+                })
+                .when('/view2',
+                {
+                    controller:'SimpleController',
+                    templateUrl:'view2.html'
+                })
+                .otherwise({redirectTo:'/view1'})
+            }]);
+
+            demoApp.controller('SimpleController', function ($scope){
+               $scope.customers=[
+                   {name:'Usman', city:'Delhi'},
+                   {name:'Ahmad', city:'Gurgao'},
+                   {name:'Vir', city:'Mumbai'},
+                   {name:'Nidhal', city:'Cochin'}
+               ];
+
+               $scope.addCustomer= function(){
+                    $scope.customers.push(
+                        {
+                            name: $scope.newCustomer.name, 
+                            city: $scope.newCustomer.city
+                        });
+               };
+            });
+
+           
+        </script>
+    </body>
+    
+</html> 

@@ -1,0 +1,293 @@
+.mat-sort-header-container {
+    align-items: center;
+  }
+
+  /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+/*Common styles accross the pages */
+body {
+  background: rgb(255, 255, 255);
+  font-family: 'Raleway' , 'Arial','Verdana', 'Helvetica', 'serif', 'sans-serif';
+}
+
+/*
+// ui{
+//     list-style-type: none;
+//     margin: 0 0 2em 0;
+//     padding: 0;
+// }
+
+// ul li {
+//     display: inline;
+//     margin-right: 30px;
+// }
+
+// ul li a{
+//     font-size: 1.5em;
+//     font-style: bold;
+// }
+*/
+a:hover {
+  color: #f00;
+}
+
+/*
+////////////////////////////////
+///Main Div Partition//////////
+///////////////////////////////
+*/
+#topup { 
+  width:100%; 
+  height: 50px; 
+  background:rgb(33, 62, 156); 
+  float:left; 
+}
+
+#left { 
+  width:17%; 
+  height:850px;
+  font-size: 20px; 
+  color: white;
+  background:rgb(214, 46, 74); 
+  float: left;
+}
+
+#right { 
+  width:81%; 
+  height:850px; 
+  background: white;
+  float: right;
+  overflow: auto;
+}
+
+#footer{
+  width:100%; 
+  height: 30px; 
+  font-size: 4mm;
+  text-align: center;
+  padding-top: 10px;
+  color:white;
+  background:rgb(87, 175, 113); 
+  float:left; 
+}
+
+#topleft
+{
+  width:17%; 
+  height: 50px; 
+  padding-top: 10px;
+  align-content: center;
+  align-items: center;
+  background-color:white;
+  float: left;
+}
+#topleft img {
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+#topright
+{
+  width:83%; 
+  height: 50px; 
+  float: left;
+  padding-top: 17px;
+  color: white;
+}
+
+/*
+//////////////////////////////////
+//Div table styles////////////////
+//////////////////////////////////
+*/
+.Table
+{
+  display: table;
+  width: 100%;
+}
+.Title
+{
+  display: table-caption;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  width: 880px;
+  background-color:rgb(122, 10, 10);
+}
+.Heading
+{
+  display: table-row;
+  font-weight: bold;
+  text-align: left;
+  background-color:rgb(34, 116, 163);
+  color: white;
+  
+}
+.Row
+{
+  display: table-row;
+
+}
+
+.CellHead
+{
+  display: table-cell;
+  /*border:solid; */
+  /*border-width: .1mm; */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.Cell
+{
+  display: table-cell;
+  border-bottom: 1px solid #dee2e6;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*
+///////////////////////////////
+//add th style for header///////
+///////////////////////////////
+*/
+.imglogo
+{
+  width: 100%;
+  height: 60px;
+}
+
+.leftPanel
+{
+  padding-left: 40px;
+  padding-right: 80px;
+  font-size: 15px; 
+}
+
+.leftFont
+{
+  font-size: 40px; 
+  font-weight: bold;
+}
+
+.menubar
+{
+  width: 150px;
+  height: 40px;
+  background:rgb(253, 252, 252);
+  padding-top: 20px;
+  padding-left: 27px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(43, 96, 128);
+  float: left;
+}
+.menubar a, a:link, a:active {
+  cursor: pointer;
+  padding: 20px 1px;
+  text-decoration: none;
+  border-bottom: 3px solid #555;
+}
+.menubar a:visited {
+  cursor: pointer;
+  text-decoration: underline;
+  border-color:rgb(33, 62, 156); 
+  border-top-width: 10px;
+  border-right-width: 10px;
+  border-bottom-width: 1px;
+  border-left-width: 10px;
+}
+.menubar a:hover {
+  background-color: rgb(33, 62, 156); 
+  color: white;
+}
+
+/*
+// .menubar a{
+//     color: rgb(43, 96, 128);
+//     //text-decoration: none;
+// }
+
+// .menubar a:hover {
+//     color: rgb(255, 105, 113);
+// }
+*/
+.linkstyle
+{
+  width: 150px;
+  height: 40px;
+  background:white;
+  padding-top: 20px;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(43, 96, 128);
+  float: left;
+}
+
+.menubarempty
+{
+  width: 17%; 
+  height:60px;
+  background:rgb(214, 46, 74);
+  float: left;  
+}
+
+
+hr.style1{
+border-top: 1px solid #8c8b8b;
+}
+
+/* Serach input style */
+.inputsearch{
+  width: 150px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.inputsearch input#search{
+  width: 150px;
+  height: 20px;
+  background:rgb(33, 62, 156);
+  border-style: solid;
+  border-color: white;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  font-size: 10pt;
+  float: left;
+  color: white;
+  padding-left: 25px;
+}
+
+.inputsearch .icon{
+  position: absolute;
+  top: 20%;
+  margin-left: 5px;
+  margin-top: 2px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+.loginbutton
+{
+  width: 230px;
+  height: 30px;
+  box-sizing: border-box;
+  background-color:red;
+
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+
+  font-family: inherit;
+  font-size: 100%;
+}
