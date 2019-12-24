@@ -1,0 +1,27 @@
+<div  class="container">
+  <p></p>
+<h5>List of Knet History</h5>
+    <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Track Id</th>
+              <th scope="col">Stage</th>
+              <th scope="col">Status</th>
+              <th scope="col">Init Date</th>
+              <th scope="col">Pay Id</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let history of knethistory">
+              <td>{{history.trackid}}</td>
+              <td>{{history.stage}}</td>
+              <td>{{history.status}}</td>
+              <td>{{history.initdate}}</td>
+              <td>{{history.payid}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="btn btn-primary btn-sm" (click)="backHome()" type="button">HOME</button>
+  </div>

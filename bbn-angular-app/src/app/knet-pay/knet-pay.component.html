@@ -1,0 +1,27 @@
+<div class="container">
+    <p></p>
+    <h4><p class="bg-danger"><font font style="color:white">&nbsp;Transaction Details</font></p></h4>
+    <p class="bg-warning"></p>
+        <table class="table">
+        <tbody>
+            <tr>
+            <th scope="row">Payee Name:</th>
+            <td>{{name}}</td>
+            </tr>
+            <tr>
+            <th scope="row">Amount:</th>
+            <td>{{amount}}</td>
+            </tr>
+            <tr>
+            <th scope="row">Comment:</th>
+            <td>{{comment}}</td>
+            </tr>
+        </tbody>
+        </table>   
+    <div>
+        <button class="btn btn-primary btn-sm" (click)="confirmPayment()" type="button">Confirm</button>&nbsp;
+        <button class="btn btn-primary btn-sm" (click)="rejectPayment()" type="button">Reject</button>
+    </div>    
+</div>
+
+
